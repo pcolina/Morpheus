@@ -8,7 +8,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class SidebarComponent implements OnInit {
   @ViewChild('sidebarCollapse') sidebarCollapse: ElementRef | undefined;
 
-  classApplied = false;
+  classApplied = true;
 
   constructor() { }
 

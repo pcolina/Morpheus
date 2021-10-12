@@ -2,41 +2,32 @@
     <!-- Sidebar  -->
     <nav id="sidebar" [ngClass]="{'active': classApplied}">
         <div class="sidebar-header">
-            <h3>
-                <button type="button" id="sidebarCollapse" class="btn btn-info" [ngClass]="{'active': classApplied}" (click)="toggleit()">
-                    <i class="fas fa-align-left"></i>
-                    <span>Cerrar</span>
-                </button>
-            </h3>
-            <strong><button type="button" id="sidebarCollapse" class="btn btn-info" [ngClass]="{'active': classApplied}" (click)="toggleit()">
-                <i class="fas fa-align-left"></i>
-                <span>Abrir</span>
-            </button></strong>
-        </div>
 
+            <!-- Closed -->
+            <h3 class="animate__animated animate__fadeInLeft animate__faster" [ngClass]="{'active': classApplied}" (click)="toggleit()">
+                <i class="bi bi-x left movex"></i>
+            </h3>
+
+            <!-- Opened -->
+            <strong [ngClass]="{'active': classApplied}" (click)="toggleit()"> <i class="bi bi-list"></i>
+             </strong>
+        </div>
         <ul class="list-unstyled components">
-            <li class="active">
-                <a href="#homeSubmenu" class="dropdown-toggle">
-                    <i class="fas fa-home"></i> Home
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <strong><span class="material-icons">home</span></strong>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn animate__faster">Dashboard</span>
                 </a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
+
             </li>
             <li>
                 <a href="#">
-                    <i class="fas fa-briefcase"></i> About
+                    <span class="material-icons">bed</span>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn animate__faster">Rooms</span>
                 </a>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-copy"></i> Pages
+                    <span class="material-icons">group</span>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn animate__faster">clientes</span>
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
@@ -52,35 +43,31 @@
             </li>
             <li>
                 <a href="#">
-                    <i class="fas fa-image"></i> Portfolio
+                    <span class="material-icons">show_chart</span>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn animate__faster">Statistics</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fas fa-question"></i> FAQ
+                    <span class="material-icons">cleaning_services</span>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn animate__faster">Cleaning</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fas fa-paper-plane"></i> Contact
+                    <span class="material-icons">settings</span>
+                    <span *ngIf="!classApplied" class="menu-icon animate__animated animate__fadeIn  animate__faster">Config</span>
                 </a>
             </li>
         </ul>
 
-        <ul class="list-unstyled CTAs">
-            <li>
-                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-            </li>
-            <li>
-                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-            </li>
-        </ul>
+
     </nav>
 
     <!-- Page Content  -->
     <div id="content">
 
-
+        <i class="fas fa-align-left"></i>
 
     </div>
 </div>

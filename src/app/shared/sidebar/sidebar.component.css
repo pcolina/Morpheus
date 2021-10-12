@@ -11,12 +11,23 @@ p {
     color: #999;
 }
 
+.material-icons {
+    vertical-align: middle;
+    line-height: 0 !important;
+    position: relative;
+    top: -1px;
+}
+
+.menu-icon {
+    padding-left: 15px;
+}
+
 a,
 a:hover,
 a:focus {
     color: inherit;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all .5s;
 }
 
 .navbar {
@@ -25,7 +36,7 @@ a:focus {
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(206, 154, 154, 0.1);
 }
 
 .navbar-btn {
@@ -62,7 +73,7 @@ span {
     max-width: 250px;
     background: #06113b;
     color: #fff;
-    transition: all 0.3s;
+    transition: all .3s;
 }
 
 #sidebar.active {
@@ -110,9 +121,17 @@ span {
     transform: translateX(50%);
 }
 
+.movex {
+    transition: all .3s;
+    -webkit-transform: translateX(180px);
+    -ms-transform: translateX(180px);
+    transform: translateX(180px);
+}
+
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #010722;
+    padding: 5px;
+    background: #06113b;
+    height: 25px;
 }
 
 #sidebar .sidebar-header strong {
@@ -143,7 +162,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #01061f;
+    background: #0f2cbe;
 }
 
 a[data-toggle="collapse"] {
@@ -196,7 +215,7 @@ a.article:hover {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: all .3s;
 }
 
 
