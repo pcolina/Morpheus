@@ -5,12 +5,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { ConfigComponent } from './configPage/configPage/config.component';
 import { PagesComponent } from './pages.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 
 const routes: Routes = [
     {
         path: '',
         component: PagesComponent,
+        canActivate: [AuthGuard],
         children: [
               { path: 'dashboard', component: DashboardComponent},
               { path: 'rooms', component: RoomsComponent},

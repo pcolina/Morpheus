@@ -1,10 +1,29 @@
 <div class="backdiv">
+  <div class="loginbox backdiv">
+    <img src="https://i.imgur.com/ZYzTdD0.png" class="avatar" />
+    <h1>Login Here</h1>
+    <form [formGroup]="loginForm" (submit)="login()">
+      <p>Username</p>
+      <input
+        type="text"
+        name=""
+        placeholder="Enter Username"
+        formControlName="email"
+      />
+      <p>Password</p>
+      <input
+        type="password"
+        name=""
+        placeholder="Enter Password"
+        formControlName="password"
+      />
+      <input type="submit" name="" value="Login" />
+      <div class="d-flex flex-row  align-items-center" >
+        <input type="checkbox" class="w-10" formControlName="remember">
+        <label style="margin-top: -20px;">Renember me</label>
+      </div>
+      <a href="#">Lost your password?</a><br />
 
-    <div class="loginbox backdiv"> <img src="https://i.imgur.com/ZYzTdD0.png" class="avatar">
-        <h1>Login Here</h1>
-        <form method="post" action="#">
-            <p>Username</p> <input type="text" name="" placeholder="Enter Username">
-            <p>Password</p> <input type="password" name="" placeholder="Enter Password"> <input type="submit" name="" value="Login"> <a href="#">Lost your password?</a><br> <a href="#">Don't have an account?</a>
-        </form>
-    </div>
+    </form>
+  </div>
 </div>
