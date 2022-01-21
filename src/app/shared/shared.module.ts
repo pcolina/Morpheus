@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { NavbarComponent } from './navbar/navbar.component'; 
- 
+import { NavbarComponent } from './navbar/navbar.component';
+
 import { MatIconModule } from '@angular/material/icon'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon'
   ],
   imports: [
     CommonModule,
-    MatIconModule,  
+    RouterModule,
+    MatIconModule,
   ],
   exports: [
     SidebarComponent,

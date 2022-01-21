@@ -6,6 +6,7 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { ConfigComponent } from './configPage/configPage/config.component';
 import { PagesComponent } from './pages.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { RoleGuard } from '../guards/role.guard';
 
 
 const routes: Routes = [
@@ -14,9 +15,21 @@ const routes: Routes = [
         component: PagesComponent,
         canActivate: [AuthGuard],
         children: [
-              { path: 'dashboard', component: DashboardComponent},
-              { path: 'rooms', component: RoomsComponent},
-              { path: 'config', component: ConfigComponent},
+              { path: 'dashboard', component: DashboardComponent,
+              canActivate: [RoleGuard],
+              data: {
+                role: 'ROLE_ALL'
+              }},
+              { path: 'rooms', component: RoomsComponent,
+              canActivate: [RoleGuard],
+              data: {
+                role: 'ROLE_USER'
+              }},
+              { path: 'config', component: ConfigComponent,
+              data: {
+                role: ['ROLE_ADMIN','ROLE_SUPERADMIN']
+              },
+              canActivate: [RoleGuard]},
         ]
     },
 ];
