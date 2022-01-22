@@ -1,38 +1,59 @@
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark container-fluid">
-    <a href="#" class="navbar-brand"><i class="fa fa-cube"></i>M<b>O</b>rpheus</a>
+<nav class="navbar navbar-expand navbar-dark bg-dark container-fluid">
+  <a href="#" class="navbar-brand"><i class="fa fa-cube"></i>M<b>O</b>rpheus</a>
 
-    <!-- Collection of nav links, forms, and other content for toggling -->
-    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start  ">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-7"></div>
-                <div class="col-3">
-                    <form class="navbar-form form-inline">
-                        <div class="input-group search-box">
-                            <input type="text" id="search" class="form-control" placeholder="Search here...">
-                            <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-2">
-                    <div class="navbar-nav ml-auto">
-                        <div class="nav-item dropdown">
-                            <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="../../../assets/pabloac.PNG" class="avatar" alt="Avatar"> Pablo Angel Colina <b class="caret"></b></a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a>
-                                <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a>
-                                <div class="divider dropdown-divider"></div>
-                                <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+  <!-- Collection of nav links, forms, and other content for toggling -->
+  <div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
+    <div >
+      <form class="navbar-form form-inline">
+        <div class="input-group search-box">
+          <input
+            type="text"
+            id="search"
+            class="form-control"
+            placeholder="Search here..."
+          />
+          <span class="input-group-addon " style="background-color: black;"
+            ><i class="material-icons">&#xE8B6;</i></span
+          >
         </div>
-
-
+      </form>
     </div>
+
+    <div class="navbar-nav ml-auto">
+      <div class="nav-item dropdown">
+        <a
+          href="#"
+          data-toggle="dropdown"
+          class="nav-item nav-link dropdown-toggle user-action" id="dropdownProfile"
+          ><img src="../../../assets/pabloac.PNG" class="avatar" alt="Avatar" />
+          Pablo Angel Colina <b class="caret"></b
+        ></a>
+        <div class="dropdown-menu" aria-labelledby="dropdownProfile" >
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-user-o"></i> Profile</a
+          >
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-calendar-o"></i> Calendar</a
+          >
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-sliders"></i> Settings</a
+          >
+          <div class="divider dropdown-divider"></div>
+          <a href="#" class="dropdown-item"
+            ><i class="material-icons">&#xE8AC;</i> Logout</a
+          >
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>
