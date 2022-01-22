@@ -20,16 +20,22 @@
     </div>
 
     <div class="navbar-nav ml-auto">
-      <div class="nav-item dropdown">
-        <a
+
+
+
+
+        <div ngbDropdown class="">
+
+          <a
           href="#"
           data-toggle="dropdown"
           class="nav-item nav-link dropdown-toggle user-action" id="dropdownProfile"
+          ngbDropdownToggle
           ><img src="../../../assets/pabloac.PNG" class="avatar" alt="Avatar" />
           Pablo Angel Colina <b class="caret"></b
         ></a>
-        <div class="dropdown-menu" aria-labelledby="dropdownProfile" >
-          <a href="#" class="dropdown-item"
+          <div ngbDropdownMenu aria-labelledby="dropdownProfile">
+            <a href="#" class="dropdown-item"
             ><i class="fa fa-user-o"></i> Profile</a
           >
           <a href="#" class="dropdown-item"
@@ -39,21 +45,15 @@
             ><i class="fa fa-sliders"></i> Settings</a
           >
           <div class="divider dropdown-divider"></div>
-          <a href="#" class="dropdown-item"
+          <a href="#" class="dropdown-item" (click)="logOut()"
             ><i class="material-icons">&#xE8AC;</i> Logout</a
           >
-        </div>
+          </div>
+
       </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
+
+
+
     </div>
   </div>
 </nav>

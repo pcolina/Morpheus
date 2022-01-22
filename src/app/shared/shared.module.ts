@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { MatIconModule } from '@angular/material/icon'
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule,
+    NgbModule
   ],
   exports: [
     SidebarComponent,

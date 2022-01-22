@@ -29,6 +29,7 @@ login ( formData: LoginForm){
 
 logout(){
       localStorage.removeItem('token');
+      this.router.navigateByUrl('/login')
 }
 
 validateToken(): Observable<boolean>{
